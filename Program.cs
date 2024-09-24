@@ -1,3 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Task_System.Data;
+using Task_System.Repository;
+using Task_System.Repository.Interface;
+
 namespace Task_System
 {
     public class Program
@@ -12,6 +18,14 @@ namespace Task_System
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            //conf DataBase
+            builder.Services.AddDbContext<TasksSystemDBContext>(      //nome da classe dentro de Data folder
+                options => options.UseSqlServer(builder.Configuration.GetConnectionString("DataBase")) //DataBase name
+                ); 
+
+            builder.Services.AddScoped<IUserRepository, UserRepository>(); //dependendias do repositorio. Toda vez que chamar a interface IUserRepository a
+                                                                            //classe UserRepository vai ser iniciada
 
             var app = builder.Build();
 
