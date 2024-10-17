@@ -45,7 +45,7 @@ namespace Task_System.Repository
 
         }
 
-        async Task<UserModel> IUserRepository.Upload(UserModel user, int id)
+        async Task<UserModel> IUserRepository.Update(UserModel user, int id)
         {
            UserModel userbyId = await SearcingById(id);
 

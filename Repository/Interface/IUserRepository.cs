@@ -8,7 +8,7 @@ namespace Task_System.Repository.Interface
         
         Task<UserModel> SearcingById(int id);
         Task<UserModel> Add(UserModel user);
-        Task<UserModel> Upload(UserModel user, int id);
+        Task<UserModel> Update(UserModel user, int id);
 
         Task<bool> Delete(int id);
 
