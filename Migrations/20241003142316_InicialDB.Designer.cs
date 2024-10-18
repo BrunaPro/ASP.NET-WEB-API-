@@ -11,7 +11,7 @@ using Task_System.Data;
 namespace Task_System.Migrations
 {
     [DbContext(typeof(TasksSystemDBContext))]
-    [Migration("20240924220601_InicialDB")]
+    [Migration("20241003142316_InicialDB")]
     partial class InicialDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
