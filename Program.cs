@@ -25,7 +25,7 @@ namespace Task_System
                 ); 
 
             builder.Services.AddScoped<IUserRepository, UserRepository>(); //dependendias do repositorio. Toda vez que chamar a interface IUserRepository a
-                                                                            //classe UserRepository vai ser iniciada
+            builder.Services.AddScoped<ITaskRepository, TaskRepository>();                                                                //classe UserRepository vai ser iniciada
 
             var app = builder.Build();
 
