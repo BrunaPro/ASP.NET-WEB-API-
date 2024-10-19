@@ -3,7 +3,7 @@ using Task_System.Models;
 
 namespace Task_System.Repository.Interface
 {
-    public interface ITaskRepositor
+    public interface ITaskRepository
     {
         Task<List<TaskModel>> SearchingAllTasks();
         

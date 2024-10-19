@@ -12,8 +12,8 @@ using Task_System.Data;
 namespace Task_System.Migrations
 {
     [DbContext(typeof(TasksSystemDBContext))]
-    [Migration("20241008013450_LinkTaskUser")]
-    partial class LinkTaskUser
+    [Migration("20241019020957_CreatingTables")]
+    partial class CreatingTables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
